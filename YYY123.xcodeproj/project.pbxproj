@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EC255B64F7A6B248DDC758D /* libPods-YYY123.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB454E6BF495759899F07E27 /* libPods-YYY123.a */; };
 		E9C16FF723CC90E5000EC6DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C16FF623CC90E5000EC6DE /* AppDelegate.m */; };
 		E9C16FFA23CC90E5000EC6DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C16FF923CC90E5000EC6DE /* ViewController.m */; };
 		E9C16FFD23CC90E5000EC6DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9C16FFB23CC90E5000EC6DE /* Main.storyboard */; };
 		E9C16FFF23CC90E6000EC6DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C16FFE23CC90E6000EC6DE /* Assets.xcassets */; };
 		E9C1700223CC90E6000EC6DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9C1700023CC90E6000EC6DE /* LaunchScreen.storyboard */; };
 		E9C1700523CC90E6000EC6DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1700423CC90E6000EC6DE /* main.m */; };
+		E9CBFD5226C5696A00E8EE69 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CBFD4E26C5696900E8EE69 /* TestViewController.m */; };
+		E9CBFD5326C5696A00E8EE69 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CBFD4F26C5696900E8EE69 /* RootViewController.m */; };
+		E9CBFD5926C56F1E00E8EE69 /* UIViewController+dismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CBFD5526C56F1E00E8EE69 /* UIViewController+dismiss.m */; };
+		E9CBFD5A26C56F1E00E8EE69 /* NSObject+dealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CBFD5626C56F1E00E8EE69 /* NSObject+dealloc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14E339FED356C49030251219 /* Pods-YYY123.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYY123.release.xcconfig"; path = "Target Support Files/Pods-YYY123/Pods-YYY123.release.xcconfig"; sourceTree = "<group>"; };
+		CB454E6BF495759899F07E27 /* libPods-YYY123.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYY123.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D80860ECA68E34420F570D6C /* Pods-YYY123.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYY123.debug.xcconfig"; path = "Target Support Files/Pods-YYY123/Pods-YYY123.debug.xcconfig"; sourceTree = "<group>"; };
 		E9C16FF223CC90E5000EC6DE /* YYY123.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYY123.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C16FF523CC90E5000EC6DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E9C16FF623CC90E5000EC6DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +34,14 @@
 		E9C1700123CC90E6000EC6DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9C1700323CC90E6000EC6DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9C1700423CC90E6000EC6DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E9CBFD4E26C5696900E8EE69 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		E9CBFD4F26C5696900E8EE69 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		E9CBFD5026C5696A00E8EE69 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		E9CBFD5126C5696A00E8EE69 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		E9CBFD5526C56F1E00E8EE69 /* UIViewController+dismiss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+dismiss.m"; sourceTree = "<group>"; };
+		E9CBFD5626C56F1E00E8EE69 /* NSObject+dealloc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+dealloc.m"; sourceTree = "<group>"; };
+		E9CBFD5726C56F1E00E8EE69 /* NSObject+dealloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+dealloc.h"; sourceTree = "<group>"; };
+		E9CBFD5826C56F1E00E8EE69 /* UIViewController+dismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+dismiss.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC255B64F7A6B248DDC758D /* libPods-YYY123.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE177BA2D01D094D3A8A0B87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB454E6BF495759899F07E27 /* libPods-YYY123.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D96C868FF11BD08934D5BD99 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D80860ECA68E34420F570D6C /* Pods-YYY123.debug.xcconfig */,
+				14E339FED356C49030251219 /* Pods-YYY123.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E9C16FE923CC90E5000EC6DE = {
 			isa = PBXGroup;
 			children = (
 				E9C16FF423CC90E5000EC6DE /* YYY123 */,
 				E9C16FF323CC90E5000EC6DE /* Products */,
+				D96C868FF11BD08934D5BD99 /* Pods */,
+				AE177BA2D01D094D3A8A0B87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +94,15 @@
 		E9C16FF423CC90E5000EC6DE /* YYY123 */ = {
 			isa = PBXGroup;
 			children = (
+				E9CBFD5426C56EAB00E8EE69 /* TlmLeaksFinder */,
 				E9C16FF523CC90E5000EC6DE /* AppDelegate.h */,
 				E9C16FF623CC90E5000EC6DE /* AppDelegate.m */,
 				E9C16FF823CC90E5000EC6DE /* ViewController.h */,
 				E9C16FF923CC90E5000EC6DE /* ViewController.m */,
+				E9CBFD5026C5696A00E8EE69 /* RootViewController.h */,
+				E9CBFD4F26C5696900E8EE69 /* RootViewController.m */,
+				E9CBFD5126C5696A00E8EE69 /* TestViewController.h */,
+				E9CBFD4E26C5696900E8EE69 /* TestViewController.m */,
 				E9C16FFB23CC90E5000EC6DE /* Main.storyboard */,
 				E9C16FFE23CC90E6000EC6DE /* Assets.xcassets */,
 				E9C1700023CC90E6000EC6DE /* LaunchScreen.storyboard */,
@@ -71,6 +112,17 @@
 			path = YYY123;
 			sourceTree = "<group>";
 		};
+		E9CBFD5426C56EAB00E8EE69 /* TlmLeaksFinder */ = {
+			isa = PBXGroup;
+			children = (
+				E9CBFD5726C56F1E00E8EE69 /* NSObject+dealloc.h */,
+				E9CBFD5626C56F1E00E8EE69 /* NSObject+dealloc.m */,
+				E9CBFD5826C56F1E00E8EE69 /* UIViewController+dismiss.h */,
+				E9CBFD5526C56F1E00E8EE69 /* UIViewController+dismiss.m */,
+			);
+			path = TlmLeaksFinder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +130,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9C1700823CC90E6000EC6DE /* Build configuration list for PBXNativeTarget "YYY123" */;
 			buildPhases = (
+				02C31715BE9E5B86C607E9AF /* [CP] Check Pods Manifest.lock */,
 				E9C16FEE23CC90E5000EC6DE /* Sources */,
 				E9C16FEF23CC90E5000EC6DE /* Frameworks */,
 				E9C16FF023CC90E5000EC6DE /* Resources */,
@@ -136,14 +189,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02C31715BE9E5B86C607E9AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YYY123-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E9C16FEE23CC90E5000EC6DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E9C16FFA23CC90E5000EC6DE /* ViewController.m in Sources */,
+				E9CBFD5A26C56F1E00E8EE69 /* NSObject+dealloc.m in Sources */,
 				E9C1700523CC90E6000EC6DE /* main.m in Sources */,
+				E9CBFD5226C5696A00E8EE69 /* TestViewController.m in Sources */,
+				E9CBFD5926C56F1E00E8EE69 /* UIViewController+dismiss.m in Sources */,
 				E9C16FF723CC90E5000EC6DE /* AppDelegate.m in Sources */,
+				E9CBFD5326C5696A00E8EE69 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,9 +359,11 @@
 		};
 		E9C1700923CC90E6000EC6DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D80860ECA68E34420F570D6C /* Pods-YYY123.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V26EY9ZA87;
 				INFOPLIST_FILE = YYY123/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,9 +377,11 @@
 		};
 		E9C1700A23CC90E6000EC6DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E339FED356C49030251219 /* Pods-YYY123.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V26EY9ZA87;
 				INFOPLIST_FILE = YYY123/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
