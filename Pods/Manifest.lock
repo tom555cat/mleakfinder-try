@@ -14,17 +14,32 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - MLeaksFinder (1.0.0):
+    - MLeaksFinder/Core (= 1.0.0)
+  - MLeaksFinder/Core (1.0.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - "MLeaksFinder (from `git@git.snowballfinance.com:ios/MLeaksFinder`, commit `cdb1bb6`)"
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
 
+EXTERNAL SOURCES:
+  MLeaksFinder:
+    :commit: cdb1bb6
+    :git: "git@git.snowballfinance.com:ios/MLeaksFinder"
+
+CHECKOUT OPTIONS:
+  MLeaksFinder:
+    :commit: cdb1bb6
+    :git: "git@git.snowballfinance.com:ios/MLeaksFinder"
+
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  MLeaksFinder: 29cae754a316ab6810cc351a3ac7528403e4598b
 
-PODFILE CHECKSUM: 5edd6daa1de3cc908e596ab03fb7c9d7a89ce7b6
+PODFILE CHECKSUM: c6c14975ab47ba2aa2bb40876e2584e524be25d3
 
 COCOAPODS: 1.10.0

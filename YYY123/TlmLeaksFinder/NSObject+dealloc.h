@@ -10,9 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class TlmLeakObjProxy;
+
 @interface NSObject (dealloc)
 
+@property (nonatomic, strong) NSArray *stackView;
+//@property (nonatomic, strong) TlmLeakObjProxy *leakObjProxy;
+
 - (void)tlmWillDealloc;
+- (void)tlmWillReleaseChild:(id)child;
+- (void)tlmWillReleaseChildren:(NSArray *)children;
 
 @end
 

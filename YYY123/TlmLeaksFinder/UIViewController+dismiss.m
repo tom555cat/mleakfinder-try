@@ -26,6 +26,11 @@
 - (void)_tlm_dismissViewControllerAnimated: (BOOL)flag completion: (void (^ __nullable)(void))completion
 {
     [self _tlm_dismissViewControllerAnimated:flag completion:completion];
+    
+    // 构建各个view的树形关系
+    [self tlmWillReleaseChildren:self.childViewControllers];
+    [self tlmWillReleaseChild:self.view];
+    
     [self tlmWillDealloc];
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2EC255B64F7A6B248DDC758D /* libPods-YYY123.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB454E6BF495759899F07E27 /* libPods-YYY123.a */; };
+		8E90A2B826C6129500D45926 /* TlmLeakObjProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E90A2B726C6129500D45926 /* TlmLeakObjProxy.m */; };
 		E9C16FF723CC90E5000EC6DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C16FF623CC90E5000EC6DE /* AppDelegate.m */; };
 		E9C16FFA23CC90E5000EC6DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C16FF923CC90E5000EC6DE /* ViewController.m */; };
 		E9C16FFD23CC90E5000EC6DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9C16FFB23CC90E5000EC6DE /* Main.storyboard */; };
@@ -22,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		14E339FED356C49030251219 /* Pods-YYY123.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYY123.release.xcconfig"; path = "Target Support Files/Pods-YYY123/Pods-YYY123.release.xcconfig"; sourceTree = "<group>"; };
+		8E90A2B626C6129500D45926 /* TlmLeakObjProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TlmLeakObjProxy.h; sourceTree = "<group>"; };
+		8E90A2B726C6129500D45926 /* TlmLeakObjProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TlmLeakObjProxy.m; sourceTree = "<group>"; };
 		CB454E6BF495759899F07E27 /* libPods-YYY123.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYY123.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80860ECA68E34420F570D6C /* Pods-YYY123.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYY123.debug.xcconfig"; path = "Target Support Files/Pods-YYY123/Pods-YYY123.debug.xcconfig"; sourceTree = "<group>"; };
 		E9C16FF223CC90E5000EC6DE /* YYY123.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYY123.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +122,8 @@
 				E9CBFD5626C56F1E00E8EE69 /* NSObject+dealloc.m */,
 				E9CBFD5826C56F1E00E8EE69 /* UIViewController+dismiss.h */,
 				E9CBFD5526C56F1E00E8EE69 /* UIViewController+dismiss.m */,
+				8E90A2B626C6129500D45926 /* TlmLeakObjProxy.h */,
+				8E90A2B726C6129500D45926 /* TlmLeakObjProxy.m */,
 			);
 			path = TlmLeaksFinder;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 				E9C16FFA23CC90E5000EC6DE /* ViewController.m in Sources */,
 				E9CBFD5A26C56F1E00E8EE69 /* NSObject+dealloc.m in Sources */,
 				E9C1700523CC90E6000EC6DE /* main.m in Sources */,
+				8E90A2B826C6129500D45926 /* TlmLeakObjProxy.m in Sources */,
 				E9CBFD5226C5696A00E8EE69 /* TestViewController.m in Sources */,
 				E9CBFD5926C56F1E00E8EE69 /* UIViewController+dismiss.m in Sources */,
 				E9C16FF723CC90E5000EC6DE /* AppDelegate.m in Sources */,
@@ -363,7 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V26EY9ZA87;
+				DEVELOPMENT_TEAM = NE8VK2242L;
 				INFOPLIST_FILE = YYY123/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -381,7 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V26EY9ZA87;
+				DEVELOPMENT_TEAM = NE8VK2242L;
 				INFOPLIST_FILE = YYY123/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

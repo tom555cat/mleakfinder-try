@@ -7,6 +7,10 @@
 //
 
 #import "NSObject+dealloc.h"
+#import <objc/runtime.h>
+
+static const char *stackViewKey;
+static const char *leakObjProxyKey;
 
 @implementation NSObject (dealloc)
 
@@ -24,6 +28,47 @@
 //            NSLog(@"------ %@, 未释放", self);
 //        }
     });
+}
+
+//- (void)setLeakObjProxy:(TlmLeakObjProxy *)leakObjProxy
+//{
+//    objc_setAssociatedObject(self, &leakObjProxyKey, leakObjProxy, OBJC_ASSOCIATION_RETAIN);
+//}
+//
+//- (TlmLeakObjProxy *)leakObjProxy
+//{
+//    return objc_getAssociatedObject(self, &leakObjProxyKey);
+//}
+
+- (void)setStackView:(NSArray *)stackView
+{
+    objc_setAssociatedObject(self, &stackViewKey, stackView, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (NSArray *)stackView
+{
+    NSArray *array = objc_getAssociatedObject(self, &stackViewKey);
+    if (!array) {   // 检查view的stack，如果没有，则从自己算起
+        array = [NSArray arrayWithObjects:NSStringFromClass([self class]), nil];
+        [self setStackView:array];
+    }
+    
+    return array;
+}
+
+- (void)tlmWillReleaseChild:(id)child
+{
+    [self tlmWillReleaseChildren:@[child]];
+}
+
+- (void)tlmWillReleaseChildren:(NSArray *)children
+{
+    NSArray *stackView = self.stackView;
+    for (id child in children) {  // 每个view的stackView都保存了从自己到祖先view的路径
+        NSMutableArray *stack = [NSMutableArray arrayWithArray:stackView];
+        [stack addObjectsFromArray:[child stackView]];
+        [child setStackView:[stack copy]];
+    }
 }
 
 //- (void)dealloc
