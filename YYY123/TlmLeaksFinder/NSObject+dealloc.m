@@ -7,6 +7,7 @@
 //
 
 #import "NSObject+dealloc.h"
+#import "TlmLeakObjProxy.h"
 #import <objc/runtime.h>
 
 static const char *stackViewKey;
@@ -14,31 +15,30 @@ static const char *leakObjProxyKey;
 
 @implementation NSObject (dealloc)
 
-- (void)tlmWillDealloc
+- (BOOL)tlmWillDealloc
 {
     __weak id weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-
-        if (weakSelf) {
-            NSLog(@"------ %@, 未释放", weakSelf);
-        }
+        __strong id strongSelf = weakSelf;
+        // 如果strongSelf为nil，直接不执行，省去了判断strongSelf是否存在这一步
+        [strongSelf tlmAssertNotDealloc];
 
 //        __strong typeof(weakSelf) self = weakSelf;
 //        if (self) {
 //            NSLog(@"------ %@, 未释放", self);
 //        }
     });
+    
+    return YES;
 }
 
-//- (void)setLeakObjProxy:(TlmLeakObjProxy *)leakObjProxy
-//{
-//    objc_setAssociatedObject(self, &leakObjProxyKey, leakObjProxy, OBJC_ASSOCIATION_RETAIN);
-//}
-//
-//- (TlmLeakObjProxy *)leakObjProxy
-//{
-//    return objc_getAssociatedObject(self, &leakObjProxyKey);
-//}
+- (void)tlmAssertNotDealloc
+{
+    NSLog(@"------ %@, %@, 未释放", [self class], self);
+    NSLog(@"------ stack view: %@", [self stackView]);
+    
+    [TlmLeakObjProxy addLeakObj:self];
+}
 
 - (void)setStackView:(NSArray *)stackView
 {
@@ -68,13 +68,8 @@ static const char *leakObjProxyKey;
         NSMutableArray *stack = [NSMutableArray arrayWithArray:stackView];
         [stack addObjectsFromArray:[child stackView]];
         [child setStackView:[stack copy]];
+        [child tlmWillDealloc];
     }
 }
-
-//- (void)dealloc
-//{
-//    // 打印当前对象
-//
-//}
 
 @end

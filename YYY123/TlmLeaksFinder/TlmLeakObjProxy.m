@@ -10,6 +10,7 @@
 #import "NSObject+dealloc.h"
 #import <objc/runtime.h>
 
+static const char *leakObjProxyKey;
 static NSMutableSet *leakedObjectPtrs;
 
 @interface TlmLeakObjProxy ()
@@ -29,17 +30,14 @@ static NSMutableSet *leakedObjectPtrs;
     // 后续输出的内容需要让代理来持有，防止被释放
     proxy.stackView = [obj stackView];
     
-    // 为了让proxy存活，让obj持有proxy，obj是id，无法暴露自定义的属性
-    objc_setAssociatedObject(obj, <#const void * _Nonnull key#>, proxy, OBJC_ASSOCIATION_RETAIN);
-    obj.leakObjProxy = proxy;
-    
+    // 为了让proxy存活，让obj强持有proxy，obj是id，无法暴露自定义的属性
+    objc_setAssociatedObject(obj, leakObjProxyKey, proxy, OBJC_ASSOCIATION_RETAIN);
 }
 
 //
 - (void)dealloc
 {
-    // 为什么要这么绕一下?
-    NSArray *viewStack = _stackView;
+    NSArray *viewStack = _stackView;    // 避免持有了self
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"---Object Deallocted---");
         NSLog(@"%@", viewStack);

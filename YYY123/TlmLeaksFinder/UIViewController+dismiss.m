@@ -27,10 +27,11 @@
 {
     [self _tlm_dismissViewControllerAnimated:flag completion:completion];
     
-    // 构建各个view的树形关系
+    // 判断UI层级下的子视图或子vc是否释放了
     [self tlmWillReleaseChildren:self.childViewControllers];
     [self tlmWillReleaseChild:self.view];
     
+    // 判断自己是否释放了
     [self tlmWillDealloc];
 }
 
