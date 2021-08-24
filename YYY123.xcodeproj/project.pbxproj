@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2EC255B64F7A6B248DDC758D /* libPods-YYY123.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB454E6BF495759899F07E27 /* libPods-YYY123.a */; };
+		8E84CD3B26D4F03A007E9F7F /* DevilSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E84CD3A26D4F03A007E9F7F /* DevilSingleton.m */; };
+		8E84CD3F26D4F0D4007E9F7F /* UIView_A.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E84CD3E26D4F0D4007E9F7F /* UIView_A.m */; };
+		8E84CD4326D4F0DF007E9F7F /* UIView_B.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E84CD4226D4F0DF007E9F7F /* UIView_B.m */; };
+		8E84CD4726D4F47E007E9F7F /* UIView+tlmLeaks.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E84CD4626D4F47E007E9F7F /* UIView+tlmLeaks.m */; };
 		8E90A2B826C6129500D45926 /* TlmLeakObjProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E90A2B726C6129500D45926 /* TlmLeakObjProxy.m */; };
 		E9C16FF723CC90E5000EC6DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C16FF623CC90E5000EC6DE /* AppDelegate.m */; };
 		E9C16FFA23CC90E5000EC6DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C16FF923CC90E5000EC6DE /* ViewController.m */; };
@@ -23,6 +27,14 @@
 
 /* Begin PBXFileReference section */
 		14E339FED356C49030251219 /* Pods-YYY123.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYY123.release.xcconfig"; path = "Target Support Files/Pods-YYY123/Pods-YYY123.release.xcconfig"; sourceTree = "<group>"; };
+		8E84CD3926D4F03A007E9F7F /* DevilSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DevilSingleton.h; sourceTree = "<group>"; };
+		8E84CD3A26D4F03A007E9F7F /* DevilSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DevilSingleton.m; sourceTree = "<group>"; };
+		8E84CD3D26D4F0D4007E9F7F /* UIView_A.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIView_A.h; sourceTree = "<group>"; };
+		8E84CD3E26D4F0D4007E9F7F /* UIView_A.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIView_A.m; sourceTree = "<group>"; };
+		8E84CD4126D4F0DF007E9F7F /* UIView_B.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIView_B.h; sourceTree = "<group>"; };
+		8E84CD4226D4F0DF007E9F7F /* UIView_B.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIView_B.m; sourceTree = "<group>"; };
+		8E84CD4526D4F47E007E9F7F /* UIView+tlmLeaks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+tlmLeaks.h"; sourceTree = "<group>"; };
+		8E84CD4626D4F47E007E9F7F /* UIView+tlmLeaks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+tlmLeaks.m"; sourceTree = "<group>"; };
 		8E90A2B626C6129500D45926 /* TlmLeakObjProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TlmLeakObjProxy.h; sourceTree = "<group>"; };
 		8E90A2B726C6129500D45926 /* TlmLeakObjProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TlmLeakObjProxy.m; sourceTree = "<group>"; };
 		CB454E6BF495759899F07E27 /* libPods-YYY123.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYY123.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +123,12 @@
 				E9C1700023CC90E6000EC6DE /* LaunchScreen.storyboard */,
 				E9C1700323CC90E6000EC6DE /* Info.plist */,
 				E9C1700423CC90E6000EC6DE /* main.m */,
+				8E84CD3926D4F03A007E9F7F /* DevilSingleton.h */,
+				8E84CD3A26D4F03A007E9F7F /* DevilSingleton.m */,
+				8E84CD3D26D4F0D4007E9F7F /* UIView_A.h */,
+				8E84CD3E26D4F0D4007E9F7F /* UIView_A.m */,
+				8E84CD4126D4F0DF007E9F7F /* UIView_B.h */,
+				8E84CD4226D4F0DF007E9F7F /* UIView_B.m */,
 			);
 			path = YYY123;
 			sourceTree = "<group>";
@@ -124,6 +142,8 @@
 				E9CBFD5526C56F1E00E8EE69 /* UIViewController+dismiss.m */,
 				8E90A2B626C6129500D45926 /* TlmLeakObjProxy.h */,
 				8E90A2B726C6129500D45926 /* TlmLeakObjProxy.m */,
+				8E84CD4526D4F47E007E9F7F /* UIView+tlmLeaks.h */,
+				8E84CD4626D4F47E007E9F7F /* UIView+tlmLeaks.m */,
 			);
 			path = TlmLeaksFinder;
 			sourceTree = "<group>";
@@ -221,11 +241,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9C16FFA23CC90E5000EC6DE /* ViewController.m in Sources */,
+				8E84CD4726D4F47E007E9F7F /* UIView+tlmLeaks.m in Sources */,
 				E9CBFD5A26C56F1E00E8EE69 /* NSObject+dealloc.m in Sources */,
+				8E84CD3B26D4F03A007E9F7F /* DevilSingleton.m in Sources */,
 				E9C1700523CC90E6000EC6DE /* main.m in Sources */,
 				8E90A2B826C6129500D45926 /* TlmLeakObjProxy.m in Sources */,
 				E9CBFD5226C5696A00E8EE69 /* TestViewController.m in Sources */,
+				8E84CD3F26D4F0D4007E9F7F /* UIView_A.m in Sources */,
 				E9CBFD5926C56F1E00E8EE69 /* UIViewController+dismiss.m in Sources */,
+				8E84CD4326D4F0DF007E9F7F /* UIView_B.m in Sources */,
 				E9C16FF723CC90E5000EC6DE /* AppDelegate.m in Sources */,
 				E9CBFD5326C5696A00E8EE69 /* RootViewController.m in Sources */,
 			);

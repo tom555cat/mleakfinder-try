@@ -7,6 +7,9 @@
 //
 
 #import "TestViewController.h"
+#import "UIView_A.h"
+#import "UIView_B.h"
+#import "DevilSingleton.h"
 
 @interface TestViewController ()
 
@@ -18,6 +21,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self addSubview];
+}
+
+- (void)addSubview
+{
+    UIView_A *a = [[UIView_A alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+    a.backgroundColor = [UIColor yellowColor];
+    UIView_B *b = [[UIView_B alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    b.backgroundColor = [UIColor purpleColor];
+    [a addSubview:b];
+    [self.view addSubview:a];
+    
+    // 单例持有了b
+    DevilSingleton.sharedInstance.holder = b;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "TestViewController.h"
+#import "DevilSingleton.h"
 
 @interface RootViewController ()
 
@@ -20,6 +21,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self addReleaseBtn];
+}
+
+- (void)addReleaseBtn
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"释放" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    button.frame = CGRectMake(100, 200, 50, 50);
+    [button addTarget:self action:@selector(releaseObj) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+
+- (void)releaseObj
+{
+    DevilSingleton.sharedInstance.holder = nil;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -27,7 +45,7 @@
     TestViewController *vc = [TestViewController new];
     vc.view.backgroundColor = [UIColor redColor];
     //vc.parent = self;
-    self.holder = vc;
+    //self.holder = vc;
     [self presentViewController:vc animated:YES completion:nil];
 }
 
